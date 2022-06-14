@@ -1,6 +1,7 @@
 ---
-layout: page
-title: About
+layout: default
+title: About us
+description: Who we are
 permalink: /about/
 ---
 
