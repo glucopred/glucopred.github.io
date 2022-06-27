@@ -30,11 +30,14 @@ Pred - narzędzie to ma służyć predykcji poziomu glukozy
 
 ## Czemu jest to ważne?
 
-TODO
+* Co 11 dorosły na świecie ma zdiagnozowaną cukrzycę
+* 1 na 4 osoby powyżej 60. roku życia w Polsce ma stwierdzoną cukrzycę
+* Co 6 sekund umiera osoba z powodu cukrzycy i jej konsekwencji
+* Całkowita liczba osób chorujących na cukrzycę na świecie zwiększyła się ponad 3,5-krotnie w ciągu ostatnich 35 lat
 
-## ...
+## Co chcemy osiągnąć?
+Chcemy na podstawie syganłów fizjologicznych zbieranych w sposób nie inwazyjny, móc dokonywać predykcji poziomu cukru we krwi. 
 
-TODO
 
 ---
 # Dane
@@ -46,8 +49,6 @@ Dane, z których korzystamy, to dane pochodzące z opaski Empatica E4 (sygnały 
 * EDA (GSR) - odpowiedź galwaniczna skóry
 * Akcelerometr - trójosiowy akcelerometr
 * Temperatura - temperatura mierzona w punkcie styku ze skórą
-
-### Jakość danych
 
 ## CGM
 
@@ -96,10 +97,31 @@ Modele sztucznej inteligencji operujące na danych medycznych często sprawdzane
 
 
 ## Oparte o sygnały w postaci serii czasowych
+TODO @WOJTEK
 
 ### Opis
 
 ### Wyniki
+
+## Oparte o szeregi czasowe cech sygnałów 
+
+### Opis
+
+Z racji, że sygnały fizjologiczne są próbkowane z różną częstotliwością zdecydowaliśmy się wypróbować podejście bazujące na wyekstrachowanych cechach charakterystycznych cechach sygnałów obliczonych dla okien 1 minutowych. Aby roższerzyć zbiór dostepnych danych zdecydowaliśmy się, zwiększyć częstotliwość próbkowania wartości glukozy za pomocą interpolacji. Dla tak przygotowanych danych wytrenowaliśmy kilknanaście modeli sieci LSTM badając podejście populacyjne jak i spersonalizowane a, także eksperymentując z różnymi długościami sekwencji sygnałów.
+
+### Wyniki
+
+W podejsciu populacyjnym wszystkie badane modele miały tendencje zbiegania do średniej i predyckowania stałej wartości
+
+W podejściu spersonalizowanym, zależnie od badanego pacjenta model próbował dokonywac predykcji lub zachowywał się tak jak model 
+
+![lstm_on_45_sec](https://user-images.githubusercontent.com/50373360/176014061-b4456bb2-8f11-4c93-a0f6-c4e2e519f971.png)
+
+
+Sprawdzono podejście, w którym populację zbudowano tylko z pacjentów, dla których model próbował predykować, ale niestety taka populacja również zbiegała do średniej
+
+
+![omatko](https://user-images.githubusercontent.com/50373360/176014061-b4456bb2-8f11-4c93-a0f6-c4e2e519f971.png)
 
 
 ---
