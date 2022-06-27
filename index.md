@@ -70,15 +70,16 @@ Dane, z których korzystamy, to dane pochodzące z opaski Empatica E4 (sygnały 
 
 ---
 # Osiągnięcia
-
+W trakcie pracy nad projektem wyniki naszej pracy zostały przedstawione na plakatach docenione na dwóch konferencjach naukowych.
+Pierwszą z nich była **Ogólnopolska Konferencja Matematyczna OMatKo!** która się odbyła w dniach 27-28 listopada 2021 roku. 
+W jej ramach zaprezentowaliśmy nasze pierwsze wyniki na plakacie pt. „Płynie w nas słodka krew. Czy AI o tym wie?”, który zdobył nagrodę za najlepszy plakat.
+Drugim wydarzeniem, na którym zaprezentowaliśmy dalsze wyniki naszych prac było **Forum AI**, które miało miejsce na Politechnice Gdańskiej w dniach 20-24 maja 2022 roku. 
+W wydarzeniu brali udział studenci z kierunków związanych ze sztuczną inteligencją z uczelni z całego kraju. 
+W ramach Forum AI, wystąpiliśmy z plakatem, który ponownie został doceniony, gdyż została zdobył pierwsze miejsce w konkursie na najlepszy plakat.
 ## OMatKo!!!
-<object data="https://raw.githubusercontent.com/thawro/thawro/main/Omatko_glucoPred.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://raw.githubusercontent.com/thawro/thawro/main/Omatko_glucoPred.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://raw.githubusercontent.com/thawro/thawro/main/Omatko_glucoPred.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+![omatko](img/omatko.svg)
 
-## AI Tech
+## Forum AI
 
 ![Results](img/fish.png)
 
