@@ -47,12 +47,21 @@ Dane, z których korzystamy, to dane pochodzące z opaski Empatica E4 (sygnały 
 * Akcelerometr - trójosiowy akcelerometr
 * Temperatura - temperatura mierzona w punkcie styku ze skórą
 
+### Jakość danych
+
 ## CGM
 
 * Poziom glukozy - mierzony w sposób ciągły (w odstępach 5-minutowych) poziom glukozy
 
+
 ---
-# Metody
+
+# Filtracja danych
+
+## PPG Quality Model
+
+
+# Modele predykujące poziom glukozy na podstawie sygnałów fizjologicznych
 
 ## Oparte o tabelaryczne cechy wydobyte z sygnałów
 
@@ -77,10 +86,8 @@ Drugim wydarzeniem, na którym zaprezentowaliśmy dalsze wyniki naszych prac by�
 W wydarzeniu brali udział studenci z kierunków związanych ze sztuczną inteligencją z uczelni z całego kraju. 
 W ramach Forum AI, wystąpiliśmy z plakatem, który ponownie został doceniony, gdyż została zdobył pierwsze miejsce w konkursie na najlepszy plakat.
 ## OMatKo!!!
-![omatko](img/omatko.svg)
-<img src="img/omatko.svg">
+![omatko](https://user-images.githubusercontent.com/50373360/176014061-b4456bb2-8f11-4c93-a0f6-c4e2e519f971.png)
+
 
 ## Forum AI
-
-![Results](img/fish.png)
-
+![forum_ai](https://user-images.githubusercontent.com/50373360/176014526-a6028867-cc56-42b8-9ba9-a1a65e49a019.png)
