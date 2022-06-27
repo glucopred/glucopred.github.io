@@ -1,5 +1,6 @@
 ---
 layout: default
+title: GlucoPred
 ---
 
 # O projekcie
@@ -24,6 +25,7 @@ layout: default
 ## Czemu GlucoPred?
 
 Gluco - tworzymy narzędzie związane z glukozą
+
 Pred - narzędzie to ma służyć predykcji poziomu glukozy
 
 ## Czemu jest to ważne?
@@ -67,7 +69,16 @@ Dane, z których korzystamy, to dane pochodzące z opaski Empatica E4 (sygnały 
 
 
 ---
-# Wyniki
+# Osiągnięcia
+
+## OMatKo!!!
+<object data="https://raw.githubusercontent.com/thawro/thawro/main/Omatko_glucoPred.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://raw.githubusercontent.com/thawro/thawro/main/Omatko_glucoPred.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://raw.githubusercontent.com/thawro/thawro/main/Omatko_glucoPred.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
+## AI Tech
 
 ![Results](img/fish.png)
 
