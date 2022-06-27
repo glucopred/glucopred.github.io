@@ -78,6 +78,7 @@ W wydarzeniu brali udział studenci z kierunków związanych ze sztuczną inteli
 W ramach Forum AI, wystąpiliśmy z plakatem, który ponownie został doceniony, gdyż została zdobył pierwsze miejsce w konkursie na najlepszy plakat.
 ## OMatKo!!!
 ![omatko](img/omatko.svg)
+<img src="img/omatko.svg">
 
 ## Forum AI
 
