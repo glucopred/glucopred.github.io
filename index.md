@@ -5,6 +5,14 @@ title: GlucoPred
 
 # O projekcie
 
+Projekt Glucopred był realizowany w ramach studiów Sztucznej Inteligencji na Wydziale Informatyki
+i Telekomunikacji na Politechnice Wrocławskiej w latach 2021 - 2022 przez
+we współpracy z poradnią diabetologiczną na ul. Dobrzyńskiej we Wrocławiu.
+
+Celem projektu Glucopred jest __stworzenie systemu dedykowanego diabetykom, informującego
+o poziomie cukru we krwi, a przede wszystkim alarmowania ich o zbyt niskich wartościach 
+glukozy__ utrzymujących się przez pewien czas (hipoglikemia).
+
 ## Osoby zaangażowane
 
 ### Wykonawcy
@@ -24,9 +32,9 @@ title: GlucoPred
 
 ## Czemu GlucoPred?
 
-Gluco - tworzymy narzędzie związane z glukozą
+Gluco — tworzymy narzędzie związane z glukozą
 
-Pred - narzędzie to ma służyć predykcji poziomu glukozy
+Pred — narzędzie to ma służyć predykcji poziomu glukozy
 
 ## Czemu jest to ważne?
 
@@ -38,6 +46,9 @@ Pred - narzędzie to ma służyć predykcji poziomu glukozy
 ## Co chcemy osiągnąć?
 Chcemy na podstawie sygnałów fizjologicznych zbieranych w sposób nie inwazyjny, móc dokonywać predykcji poziomu cukru we krwi. 
 
+Chcemy to zrobić przy wykorzystaniu sygnałów fizjologicznych pobieranych przez urządzenie
+typu smartwatch, a zatem jako system bezinwazyjny w odróżnieniu od istniejących rozwiązań
+pozwoliłby zwiększyć komfort osób z cukrzycą.
 
 ---
 # Dane
