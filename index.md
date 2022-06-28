@@ -138,13 +138,12 @@ W podejsciu populacyjnym wszystkie badane modele miały tendencje zbiegania do �
 
 W podejściu spersonalizowanym, zależnie od badanego pacjenta model próbował dokonywac predykcji lub zachowywał się tak jak model 
 
-![lstm_on_45_sec](https://user-images.githubusercontent.com/50373360/176014061-b4456bb2-8f11-4c93-a0f6-c4e2e519f971.png)
+![lstm_on_45_sec](img/lstm_on_45_sec.png)
 
 
 Sprawdzono podejście, w którym populację zbudowano tylko z pacjentów, dla których model próbował predykować, ale niestety taka populacja również zbiegała do średniej
 
 
-![omatko](https://user-images.githubusercontent.com/50373360/176014061-b4456bb2-8f11-4c93-a0f6-c4e2e519f971.png)
 
 
 ---
