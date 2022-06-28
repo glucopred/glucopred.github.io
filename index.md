@@ -36,7 +36,7 @@ Pred - narzędzie to ma służyć predykcji poziomu glukozy
 * Całkowita liczba osób chorujących na cukrzycę na świecie zwiększyła się ponad 3,5-krotnie w ciągu ostatnich 35 lat
 
 ## Co chcemy osiągnąć?
-Chcemy na podstawie syganłów fizjologicznych zbieranych w sposób nie inwazyjny, móc dokonywać predykcji poziomu cukru we krwi. 
+Chcemy na podstawie sygnałów fizjologicznych zbieranych w sposób nie inwazyjny, móc dokonywać predykcji poziomu cukru we krwi. 
 
 
 ---
@@ -45,15 +45,14 @@ Dane, z których korzystamy, to dane pochodzące z opaski Empatica E4 (sygnały 
 
 ## Empatica
 
-* BVP - sygnał z fotopletyzmografu (PPG)
-* EDA (GSR) - odpowiedź galwaniczna skóry
-* Akcelerometr - trójosiowy akcelerometr
-* Temperatura - temperatura mierzona w punkcie styku ze skórą
+* BVP — sygnał z fotopletyzmografu (PPG)
+* EDA (GSR) — odpowiedź galwaniczna skóry
+* Akcelerometr — trójosiowy akcelerometr
+* Temperatura — temperatura mierzona w punkcie styku ze skórą
 
 ## CGM
 
-* Poziom glukozy - mierzony w sposób ciągły (w odstępach 5-minutowych) poziom glukozy
-
+* Poziom glukozy — mierzony w sposób ciągły (w odstępach 5-minutowych) poziom glukozy
 
 ---
 
@@ -80,6 +79,27 @@ Rysunek poniżej przedstawia przykładową ocenę jakości sygnału PPG. Model j
 
 # Modele predykujące poziom glukozy na podstawie sygnałów fizjologicznych
 
+## Oparte o sygnały w postaci serii czasowych
+
+### Opis
+
+Wykorzystaliśmy model LSTM, który na wejściu brał surowe wartości sygnałów fizjologicznych z
+wybranego przedziału czasowego, dla którego miał predykować wartość poziomu glukozy w zadanym odstępie czasowym.
+
+Wybrany okres czasowy, na którego podstawie miała dokonywać się predykcja, podzielony był na daną liczbę okien.
+Dla każdego okna tworzono wektor skonkatenowanych wartości poszczególnych sygnałów (np. PPG i GSR). 
+Taka sekwencja wektorów stanowiła wejście do modelu LSTM.
+
+### Wyniki
+
+Niestety, otrzymane modele cechowały się bardzo niską jakością działania. Wyuczyły się zwracać 
+wartość stałą, co wynika z charakterystyki uczenia sieci neuronowych.
+
+![Wyniki dla modelu LSTM](img/pred_signal.png)
+
+Próby uproszczenia problemu do problemu klasyfikacji binarnej tj. decyzji czy ma miejsce
+stan hipoglikemii, czy nie również nie dało dobrych wyników.
+
 ## Podejście spersonalizowane oparte o tabelaryczne cechy wydobyte z sygnałów
 
 ### Opis
@@ -94,14 +114,6 @@ Modele sztucznej inteligencji operujące na danych medycznych często sprawdzane
 #### Zastosowanie analogicznej procedury wydobycia cech dla całego dostępnego zbioru: MAE = 48.31
 ![no_personalization_features](https://user-images.githubusercontent.com/50373360/176017443-aabe6f5c-2b5b-42cb-b4b3-0ad9d8a11c9d.png)
 
-
-
-## Oparte o sygnały w postaci serii czasowych
-TODO @WOJTEK
-
-### Opis
-
-### Wyniki
 
 ## Oparte o szeregi czasowe cech sygnałów 
 
@@ -138,3 +150,26 @@ W ramach Forum AI, wystąpiliśmy z plakatem, który ponownie został doceniony,
 
 ## Forum AI
 ![forum_ai](https://user-images.githubusercontent.com/50373360/176014526-a6028867-cc56-42b8-9ba9-a1a65e49a019.png)
+
+
+---
+# Podsumowanie
+
+Czego dokonaliśmy:
+ - zebranie dużej wielkości zbioru danych zawierającego pomiary sygnałów fizjologicznych
+   wraz z pomiarami poziomu glukozy. Zawiera on dane o sygnałach fizjologicznych i dane o poziomach
+   glukozy we krwi dal 13 osób.
+   __Jest to jeden z niewielu zbiorów, który zawiera tak dokładne i liczne dane__ o sygnałach
+   fizjologicznych zsynchronizowane z sygnałami z CGM.
+ - próby stworzenia modeli predykujących poziom glukozy, przetestowane różne podejścia z modelami LSTM, 
+LGRM, lasy losowe z wykorzystaniem surowych sygnałów lub specjalistycznych cech. Nie dały one jednak 
+satysfakcjonujących wyników.
+ - stworzenie modela uczenia maszynowego, który automatycznie dokonuje klasyfikacji, czy 
+   dany sygnał jest dobrej jakości. Taki model posłuży się do filtracji złych danych.
+
+Mimo że wyniki uzyskane przez nasz zespół nie są satysfakcjonujące, to odbiór projektu potwierdzony 
+przez zdobyte nagrody pokazuje, jak ważnym istotnym wyzwaniem jest zwiększenie komfortu
+życia diabetyków, gdyż problem ten dotyka coraz większą część społeczeństwa. 
+Dlatego też  wierzymy, że kontynuowana będzie współpraca z poradnią diabetologiczną oraz prowadzone będą
+dalsze prace, których celem będzie wykorzystanie sztucznej inteligencji na polu pomocy osobom
+cierpiącym na cukrzycę.
